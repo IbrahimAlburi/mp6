@@ -19,6 +19,6 @@ export async function GET(req: NextRequest) {
   const access_token = tokenData.access_token;
 
   return NextResponse.redirect(
-    `http://localhost:3000/success?token=${access_token}`
+  `${process.env.BASE_URL}/success?token=${access_token}`
     );
 }
